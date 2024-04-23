@@ -129,7 +129,7 @@ results.to_csv('ARIMA_result.csv')
 model = ARIMA(df, order=(13,1,6)).fit()
 model.summary()
 
-forecast = model.predict(start=len(df), end=len(df)+12)
+forecast = model.predict(start=len(df)-1, end=len(df)+12)
 print(forecast)
 
 plt.figure(figsize=(20, 10))
